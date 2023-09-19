@@ -18,6 +18,7 @@ const Contact = ({ setSelectedPage }: Props) => {
     formState: { errors },
   } = useForm();
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSubmit = async (e: any) => {
     const isValid = await trigger();
     if (!isValid) {
@@ -66,7 +67,7 @@ const Contact = ({ setSelectedPage }: Props) => {
             <form
               target="_blank"
               onSubmit={onSubmit}
-              action='https://formsubmit.co/jatris64@gmail.com'
+              action='https://formsubmit.co/el/pajore'
               method='POST'
               >
                 <input
