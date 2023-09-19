@@ -8,23 +8,23 @@ import {
 import { motion } from "framer-motion"
 import Benefit from "./Benefit"
 import ActionButton from "@/shared/ActionButton"
-import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png"
+import HappyStudent from "@/assets/HappyStudent3.png"
 
 const benefits: Array<BenefitType> = [
   {
     icon: <StarIcon className="h-6 w-6" />,
     title: "Practical Approach in Focus",
-    description: "I use the latest technology to make sure you have the best experience possible."
+    description: "Using the latest methodologies to make sure that the attendee has the best learning experience possible."
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
     title: "100% diverse classes",
-    description: "I use the latest technology to make sure you have the best experience possible."
+    description: "There are no similar classes, the topics are always adjusted based on the student's interests and needs, or their knowledge gaps."
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
     title: "Pro Trainer",
-    description: "sadfsddfg"
+    description: "A professional trainer with years of experience in teaching, working with groups from multinational companies, private attendees or young students. "
   }
 ]
 
@@ -71,7 +71,7 @@ const Benefits = ({setSelectedPage}: Props) => {
       
       {/* BENEFITS */}
       <motion.div 
-      className="md:flex items-center justify-between gap-8 mt-5"
+      className="mt-5 items-center justify-between gap-8 md:flex"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -92,8 +92,8 @@ const Benefits = ({setSelectedPage}: Props) => {
       <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
         {/* GRAPHIC */}
           <img 
-          className="mx-auto"
-          src={BenefitsPageGraphic} alt="benefit-page-graphic" />
+          className="mx-auto max-w-sm"
+          src={HappyStudent} alt="benefit-page-graphic" />
 
         {/* DESCRIPTION */}
         <div>
