@@ -8,7 +8,7 @@ import {
 import { motion } from "framer-motion"
 import Benefit from "./Benefit"
 import ActionButton from "@/shared/ActionButton"
-import HappyStudent from "@/assets/HappyStudent3.png"
+import HappyStudent from "@/assets/HappyStudent.png"
 
 const benefits: Array<BenefitType> = [
   {
@@ -92,7 +92,7 @@ const Benefits = ({setSelectedPage}: Props) => {
       <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
         {/* GRAPHIC */}
           <img 
-          className="mx-auto max-w-sm"
+          className="mx-auto max-w-sm "
           src={HappyStudent} alt="benefit-page-graphic" />
 
         {/* DESCRIPTION */}
