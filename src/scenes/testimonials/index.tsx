@@ -43,7 +43,7 @@ const Testimonials = ({ setSelectedPage }: Props) => {
             Results That Feel Real
           </p>
           <HText>Students Say It Better Than We Do</HText>
-          <p className="mt-4 text-slate-600">
+          <p className="mt-4 text-slate-600 dark:text-zinc-300">
             You will not just learn English rules. You will build momentum, confidence, and
             a speaking routine that fits your everyday life.
           </p>
@@ -53,10 +53,10 @@ const Testimonials = ({ setSelectedPage }: Props) => {
           {testimonials.map((testimonial) => (
             <article
               key={testimonial.name}
-              className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-200/60"
+              className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-200/60 dark:border-amber-700/40 dark:bg-zinc-900 dark:shadow-black/50"
             >
-              <p className="text-slate-700">"{testimonial.quote}"</p>
-              <p className="mt-5 text-sm font-semibold text-slate-900">{testimonial.name}</p>
+              <p className="text-slate-700 dark:text-zinc-300">"{testimonial.quote}"</p>
+              <p className="mt-5 text-sm font-semibold text-slate-900 dark:text-amber-300">{testimonial.name}</p>
             </article>
           ))}
         </div>

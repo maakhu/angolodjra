@@ -65,7 +65,7 @@ const Benefits = ({setSelectedPage}: Props) => {
           Why This Works
         </p>
         <HText>More Than A Class. It Is A Training System You Can Actually Use.</HText>
-        <p className="my-5 max-w-2xl text-slate-600">
+        <p className="my-5 max-w-2xl text-slate-600 dark:text-zinc-300">
           We combine conversation, listening, pronunciation, and practical grammar in one flow.
           Every lesson is active, tailored, and connected to your real communication needs.
         </p>
@@ -94,7 +94,7 @@ const Benefits = ({setSelectedPage}: Props) => {
       <div className="mt-16 items-center justify-between gap-16 md:mt-28 md:flex">
         {/* GRAPHIC */}
           <img 
-          className="mx-auto max-w-sm rounded-[2rem] border border-slate-200 object-cover shadow-2xl shadow-slate-200/60"
+          className="mx-auto max-w-sm rounded-[2rem] border border-slate-200 object-cover shadow-2xl shadow-slate-200/60 dark:border-amber-700/40 dark:shadow-black/50"
           src={HappyStudent} alt="benefit-page-graphic" />
 
         {/* DESCRIPTION */}
@@ -130,11 +130,11 @@ const Benefits = ({setSelectedPage}: Props) => {
                visible: { opacity: 1, x: 0 }
              }}
           >
-            <p className="my-5 text-slate-600">
+            <p className="my-5 text-slate-600 dark:text-zinc-300">
               You get a clear learning path, not random exercises. We track what you can already do,
               identify what is holding you back, and then train those exact situations until they feel natural.
             </p>
-            <p className="mb-5 text-slate-600">
+            <p className="mb-5 text-slate-600 dark:text-zinc-300">
               The result is simple: less overthinking, more speaking. If you are ready to improve your
               English in a practical and motivating way, book a first consultation.
             </p>

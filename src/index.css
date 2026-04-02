@@ -4,6 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-solid: #fffaf1;
+  --bg-layer-1: radial-gradient(circle at 16% 14%, rgba(251, 191, 36, 0.2), transparent 38%);
+  --bg-layer-2: radial-gradient(circle at 88% 20%, rgba(251, 113, 133, 0.15), transparent 42%);
+  --bg-layer-3: radial-gradient(circle at 55% 82%, rgba(15, 23, 42, 0.07), transparent 36%);
+}
+
+.dark {
+  --bg-solid: #09090b;
+  --bg-layer-1: radial-gradient(circle at 12% 12%, rgba(245, 158, 11, 0.2), transparent 34%);
+  --bg-layer-2: radial-gradient(circle at 86% 18%, rgba(250, 204, 21, 0.12), transparent 42%);
+  --bg-layer-3: radial-gradient(circle at 50% 86%, rgba(255, 255, 255, 0.06), transparent 36%);
+}
+
 html,
 body,
 #root,
@@ -15,11 +29,12 @@ body,
 }
 
 body {
-  background-color: #fffaf1;
+  background-color: var(--bg-solid);
   background-image:
-    radial-gradient(circle at 16% 14%, rgba(251, 191, 36, 0.2), transparent 38%),
-    radial-gradient(circle at 88% 20%, rgba(251, 113, 133, 0.15), transparent 42%),
-    radial-gradient(circle at 55% 82%, rgba(15, 23, 42, 0.07), transparent 36%);
+    var(--bg-layer-1),
+    var(--bg-layer-2),
+    var(--bg-layer-3);
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 
 * {

@@ -16,7 +16,7 @@ type Props = {
 
 const Contact = ({ setSelectedPage }: Props) => {
   const inputStyles = `mb-4 w-full rounded-2xl border border-slate-200 bg-white
-  px-5 py-3 text-slate-800 placeholder-slate-400 outline-none transition duration-300 focus:border-amber-400`;
+  px-5 py-3 text-slate-800 placeholder-slate-400 outline-none transition duration-300 focus:border-amber-400 dark:border-amber-700/40 dark:bg-zinc-900 dark:text-zinc-100 dark:placeholder-zinc-500 dark:focus:border-amber-400`;
 
   const {
     register,
@@ -54,7 +54,7 @@ const Contact = ({ setSelectedPage }: Props) => {
           <HText>
             Ready To Speak English With More Confidence?
           </HText>
-          <p className="my-5 text-slate-600">
+          <p className="my-5 text-slate-600 dark:text-zinc-300">
             Send a short message and we will arrange your first consultation.
             We will map your current level, goals, and the fastest path to progress.
           </p>
@@ -63,7 +63,7 @@ const Contact = ({ setSelectedPage }: Props) => {
         {/* FORM AND IMAGE */}
         <div className="mt-10 justify-between gap-8 md:flex">
           <motion.div
-            className="mt-10 basis-3/5 rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/60 md:mt-0"
+            className="mt-10 basis-3/5 rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/60 dark:border-amber-700/40 dark:bg-zinc-900 dark:shadow-black/50 md:mt-0"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -90,7 +90,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 })}
               />
               {errors.name && (
-                <p className="mt-1 text-sm text-rose-600">
+                <p className="mt-1 text-sm text-rose-600 dark:text-rose-400">
                   {errors.name.type === "required" && "This field is required."}
                   {errors.name.type === "maxLength" &&
                     "Max length is 100 char."}
@@ -107,7 +107,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 })}
                 />
                 {errors.email && (
-                  <p className='mt-1 text-sm text-rose-600'>
+                  <p className='mt-1 text-sm text-rose-600 dark:text-rose-400'>
                     {errors.email.type === 'required' && 'This field is required'}
                     {errors.email.type === 'pattern' && 'Invalid email address'}
                   </p>
@@ -124,18 +124,18 @@ const Contact = ({ setSelectedPage }: Props) => {
                 })}
                 />
                 {errors.message && (
-                  <p className='mt-1 text-sm text-rose-600'>
+                  <p className='mt-1 text-sm text-rose-600 dark:text-rose-400'>
                     {errors.message.type === 'required' && 'This field is required'}
                     {errors.message.type === 'maxLength' && 'Max length is 2000 characters'}
                   </p>
                 )}
                 <button
                 type="submit"
-                className="mt-5 rounded-full bg-slate-900 px-10 py-3 text-sm font-semibold tracking-wide text-white transition duration-300 hover:bg-amber-400 hover:text-slate-900"
+                className="mt-5 rounded-full bg-slate-900 px-10 py-3 text-sm font-semibold tracking-wide text-white transition duration-300 hover:bg-amber-400 hover:text-slate-900 dark:bg-amber-400 dark:text-zinc-950 dark:hover:bg-amber-300"
               >
                 Send Message
               </button>
-              <p className="mt-4 text-sm text-slate-500">No spam. Just a personal reply within 24 hours.</p>
+              <p className="mt-4 text-sm text-slate-500 dark:text-zinc-400">No spam. Just a personal reply within 24 hours.</p>
               </form>
             </motion.div>
           </div>

@@ -10,6 +10,21 @@ import Testimonials from "./scenes/testimonials";
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme === "dark";
+  });
+
+  useEffect(() => {
+    const htmlElement = document.documentElement;
+    if (isDarkMode) {
+      htmlElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      htmlElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDarkMode]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,11 +40,13 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return <div className="app bg-sand-50">
+  return <div className="app bg-sand-50 transition-colors duration-300 dark:bg-zinc-950">
     <Navbar
               isTopOfPage={isTopOfPage}
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              isDarkMode={isDarkMode}
+              toggleDarkMode={() => setIsDarkMode((prevState) => !prevState)}
     />
     <Home setSelectedPage={setSelectedPage} />
     <Benefits setSelectedPage={setSelectedPage} />

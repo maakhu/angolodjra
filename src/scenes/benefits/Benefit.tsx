@@ -18,18 +18,18 @@ const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
   return (
     <motion.div 
     variants = {childVariant}
-    className="mt-5 rounded-3xl border border-slate-200 bg-white px-7 py-10 text-center shadow-lg shadow-slate-200/60"
+    className="mt-5 rounded-3xl border border-slate-200 bg-white px-7 py-10 text-center shadow-lg shadow-slate-200/60 dark:border-amber-700/40 dark:bg-zinc-900 dark:shadow-black/50"
 
     >
       <div className="mb-4 flex justify-center">
-        <div className="rounded-full border border-slate-200 bg-amber-100 p-4 text-slate-800">
+        <div className="rounded-full border border-slate-200 bg-amber-100 p-4 text-slate-800 dark:border-amber-700/40 dark:bg-zinc-950 dark:text-amber-300">
           {icon}
         </div>
       </div>
-      <h4 className="font-display text-xl font-semibold text-slate-900">{title}</h4>
-      <p className="my-4 text-slate-600">{description}</p>
+      <h4 className="font-display text-xl font-semibold text-slate-900 dark:text-zinc-100">{title}</h4>
+      <p className="my-4 text-slate-600 dark:text-zinc-300">{description}</p>
       <AnchorLink
-            className="text-sm font-semibold text-slate-700 underline decoration-amber-500 underline-offset-4 hover:text-slate-900"
+            className="text-sm font-semibold text-slate-700 underline decoration-amber-500 underline-offset-4 hover:text-slate-900 dark:text-amber-200 dark:decoration-amber-300 dark:hover:text-amber-100"
             onClick={() => setSelectedPage(SelectedPage.Contact)}
             href={`#${SelectedPage.Contact}`}
             >

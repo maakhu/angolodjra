@@ -20,8 +20,8 @@ const Home = ({setSelectedPage}: Props) => {
       id = "home"
       className="relative overflow-hidden pt-24"
     >
-      <div className="pointer-events-none absolute -left-32 top-24 h-72 w-72 rounded-full bg-amber-200/55 blur-3xl" />
-      <div className="pointer-events-none absolute right-0 top-36 h-80 w-80 rounded-full bg-rose-200/40 blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 top-24 h-72 w-72 rounded-full bg-amber-200/55 blur-3xl dark:bg-amber-400/15" />
+      <div className="pointer-events-none absolute right-0 top-36 h-80 w-80 rounded-full bg-rose-200/40 blur-3xl dark:bg-yellow-200/10" />
       {/* IMAGE AND MAIN HEADER */}
       <motion.div 
         className="mx-auto flex w-5/6 flex-col items-center justify-between gap-14 pb-16 md:h-[82vh] md:flex-row"
@@ -43,17 +43,17 @@ const Home = ({setSelectedPage}: Props) => {
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-amber-600">
               English Coaching With Personality
             </p>
-            <h1 className="font-display text-5xl font-semibold leading-[1.08] text-slate-900 md:text-7xl">
+            <h1 className="font-display text-5xl font-semibold leading-[1.08] text-slate-900 dark:text-zinc-100 md:text-7xl">
               Speak natural English with confidence, not fear.
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-slate-600">
+            <p className="mt-6 max-w-xl text-lg text-slate-600 dark:text-zinc-300">
               Personal sessions that blend real conversations, practical grammar, and
               everyday vocabulary, so your English works in real life from day one.
             </p>
-            <div className="mt-8 grid max-w-xl grid-cols-3 gap-3 text-center text-xs font-semibold uppercase tracking-wide text-slate-700">
-              <p className="rounded-full border border-slate-300 bg-white px-3 py-2">1:1 Focus</p>
-              <p className="rounded-full border border-slate-300 bg-white px-3 py-2">Real Topics</p>
-              <p className="rounded-full border border-slate-300 bg-white px-3 py-2">Fast Progress</p>
+            <div className="mt-8 grid max-w-xl grid-cols-3 gap-3 text-center text-xs font-semibold uppercase tracking-wide text-slate-700 dark:text-amber-200">
+              <p className="rounded-full border border-slate-300 bg-white px-3 py-2 dark:border-amber-700/50 dark:bg-zinc-900">1:1 Focus</p>
+              <p className="rounded-full border border-slate-300 bg-white px-3 py-2 dark:border-amber-700/50 dark:bg-zinc-900">Real Topics</p>
+              <p className="rounded-full border border-slate-300 bg-white px-3 py-2 dark:border-amber-700/50 dark:bg-zinc-900">Fast Progress</p>
             </div>
           </motion.div>
           {/* ACTIONS */}
@@ -72,7 +72,7 @@ const Home = ({setSelectedPage}: Props) => {
               Start My First Session
             </ActionButton>
             <AnchorLink
-            className="text-sm font-semibold text-slate-700 underline decoration-amber-500 underline-offset-4 transition duration-300 hover:text-slate-900"
+            className="text-sm font-semibold text-slate-700 underline decoration-amber-500 underline-offset-4 transition duration-300 hover:text-slate-900 dark:text-amber-200 dark:decoration-amber-300 dark:hover:text-amber-100"
             onClick={() => setSelectedPage(SelectedPage.Benefits)}
             href={`#${SelectedPage.Benefits}`}
             >
@@ -93,19 +93,19 @@ const Home = ({setSelectedPage}: Props) => {
                 visible: { opacity: 1, x: 0 }
               }}    
               >
-          <div className="absolute -bottom-5 -left-4 h-full w-full rounded-[2rem] bg-slate-900/10 blur-sm" />
+          <div className="absolute -bottom-5 -left-4 h-full w-full rounded-[2rem] bg-slate-900/10 blur-sm dark:bg-amber-500/15" />
           <img
             src={ Balint }
             alt="English coach portrait"
-            className="relative z-10 max-h-[560px] w-full max-w-md rounded-[2rem] object-cover shadow-2xl shadow-slate-300/50"
+            className="relative z-10 max-h-[560px] w-full max-w-md rounded-[2rem] border border-transparent object-cover shadow-2xl shadow-slate-300/50 dark:border-amber-700/40 dark:shadow-amber-900/20"
           />
         </motion.div>
       </motion.div>
 
       {/* SPONSORS */}
       {isAboveMediumScreens && (
-      <div className="mx-auto mb-8 flex w-5/6 flex-col items-center rounded-3xl border border-slate-200 bg-white/70 py-8 shadow-xl shadow-slate-200/30 backdrop-blur-sm">
-        <p className="text-sm font-bold uppercase tracking-[0.2em] text-slate-600">
+      <div className="mx-auto mb-8 flex w-5/6 flex-col items-center rounded-3xl border border-slate-200 bg-white/70 py-8 shadow-xl shadow-slate-200/30 backdrop-blur-sm dark:border-amber-700/40 dark:bg-zinc-900/70 dark:shadow-black/50">
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-slate-600 dark:text-amber-200">
           Trusted by learners from
         </p>
         <div className="mt-4 flex items-center justify-center gap-10 grayscale">
