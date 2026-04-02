@@ -1,9 +1,8 @@
 export enum SelectedPage {
   Home = "home",
   Benefits = "benefits",
-  Classes = "classes",
+  Testimonials = "testimonials",
   Contact = "contact",
-  Calendar = "calendar",
 }
 
 export interface BenefitType{

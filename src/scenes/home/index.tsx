@@ -1,8 +1,6 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
 import ActionButton from "@/shared/ActionButton";
-// import HomePageText from "@/assets/HomePageText.png";
-// import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import Balint from "@/assets/portraitBalint.jpg";
 import SponsorRedBull from "@/assets/SponsorRedBull.png";
 import SponsorForbes from "@/assets/SponsorForbes.png";
@@ -20,18 +18,19 @@ const Home = ({setSelectedPage}: Props) => {
   return (
     <section
       id = "home"
-      className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0"
+      className="relative overflow-hidden pt-24"
     >
+      <div className="pointer-events-none absolute -left-32 top-24 h-72 w-72 rounded-full bg-amber-200/55 blur-3xl" />
+      <div className="pointer-events-none absolute right-0 top-36 h-80 w-80 rounded-full bg-rose-200/40 blur-3xl" />
       {/* IMAGE AND MAIN HEADER */}
       <motion.div 
-        className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
+        className="mx-auto flex w-5/6 flex-col items-center justify-between gap-14 pb-16 md:h-[82vh] md:flex-row"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* MAIN HEADER */}
-        <div className="z-10 mt-32 md:basis-3/5">
+        <div className="z-10 mt-12 md:basis-1/2">
           {/* HEADINGS */}
           <motion.div 
-            className="md:-mt-20"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -41,23 +40,25 @@ const Home = ({setSelectedPage}: Props) => {
               visible: { opacity: 1, x: 0 }
             }}
           >
-            <div className="relative">
-              <div className="before:absolute  before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetextxl">
-                <h1 className="text-8xl">angolódj rá!</h1>
-                {/* <img src={HomePageText} alt="home-page-text" /> */}
-              </div>
-            </div>
-            <p className="mt-8 text-3xl font-bold text-gray-100">
-              <span>
-                The best way to learn
-              <br />
-                English
-              </span>
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-amber-600">
+              English Coaching With Personality
             </p>
+            <h1 className="font-display text-5xl font-semibold leading-[1.08] text-slate-900 md:text-7xl">
+              Speak natural English with confidence, not fear.
+            </h1>
+            <p className="mt-6 max-w-xl text-lg text-slate-600">
+              Personal sessions that blend real conversations, practical grammar, and
+              everyday vocabulary, so your English works in real life from day one.
+            </p>
+            <div className="mt-8 grid max-w-xl grid-cols-3 gap-3 text-center text-xs font-semibold uppercase tracking-wide text-slate-700">
+              <p className="rounded-full border border-slate-300 bg-white px-3 py-2">1:1 Focus</p>
+              <p className="rounded-full border border-slate-300 bg-white px-3 py-2">Real Topics</p>
+              <p className="rounded-full border border-slate-300 bg-white px-3 py-2">Fast Progress</p>
+            </div>
           </motion.div>
           {/* ACTIONS */}
           <motion.div
-           className="mt-8 flex items-center gap-8"
+           className="mt-10 flex items-center gap-7"
            initial="hidden"
            whileInView="visible"
            viewport={{ once: true, amount: 0.5 }}
@@ -68,22 +69,21 @@ const Home = ({setSelectedPage}: Props) => {
            }}
            >
             <ActionButton setSelectedPage={setSelectedPage}>
-              Get started
+              Start My First Session
             </ActionButton>
             <AnchorLink
-            className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-            onClick={() => setSelectedPage(SelectedPage.Contact)}
+            className="text-sm font-semibold text-slate-700 underline decoration-amber-500 underline-offset-4 transition duration-300 hover:text-slate-900"
+            onClick={() => setSelectedPage(SelectedPage.Benefits)}
             href={`#${SelectedPage.Benefits}`}
             >
-              <p>Learn More</p>
+              <p>See How It Works</p>
             </AnchorLink>
           </motion.div>
         </div>
 
         {/* IMAGE */}
         <motion.div 
-          className="flex basis-3/5 justify-center md:z-10
-              md:ml-40 md:mt-16 md:justify-end max-w-xs py-8"
+          className="relative flex basis-1/2 justify-center md:z-10 md:justify-end"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
@@ -93,19 +93,22 @@ const Home = ({setSelectedPage}: Props) => {
                 visible: { opacity: 1, x: 0 }
               }}    
               >
-          <img src={ Balint } alt="home-page-graphic" />
+          <div className="absolute -bottom-5 -left-4 h-full w-full rounded-[2rem] bg-slate-900/10 blur-sm" />
+          <img
+            src={ Balint }
+            alt="English coach portrait"
+            className="relative z-10 max-h-[560px] w-full max-w-md rounded-[2rem] object-cover shadow-2xl shadow-slate-300/50"
+          />
         </motion.div>
       </motion.div>
 
       {/* SPONSORS */}
       {isAboveMediumScreens && (
-      <div className="flex flex-col justify-center items-center">
-        <p className="text-sm font-bold text-gray-100">
-          <span>
-            Trusted by
-          </span>
+      <div className="mx-auto mb-8 flex w-5/6 flex-col items-center rounded-3xl border border-slate-200 bg-white/70 py-8 shadow-xl shadow-slate-200/30 backdrop-blur-sm">
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-slate-600">
+          Trusted by learners from
         </p>
-        <div className="flex justify-center items-center gap-10">
+        <div className="mt-4 flex items-center justify-center gap-10 grayscale">
           <img src={SponsorRedBull} alt="sponsor-red-bull" />
           <img src={SponsorForbes} alt="sponsor-forbes" />
           <img src={SponsorFortune} alt="sponsor-fortune" />

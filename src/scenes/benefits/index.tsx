@@ -13,18 +13,18 @@ import HappyStudent from "@/assets/HappyStudent.png"
 const benefits: Array<BenefitType> = [
   {
     icon: <StarIcon className="h-6 w-6" />,
-    title: "Practical Approach in Focus",
-    description: "Using the latest methodologies to make sure that the attendee has the best learning experience possible."
+    title: "Practice Before Perfection",
+    description: "You start speaking immediately with guided prompts, useful phrases, and focused feedback."
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
-    title: "100% diverse classes",
-    description: "There are no similar classes, the topics are always adjusted based on the student's interests and needs, or their knowledge gaps."
+    title: "Personalized For Your World",
+    description: "Lessons are tailored to your work, interests, goals, and weak points so nothing feels generic."
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
-    title: "Pro Trainer",
-    description: "A professional trainer with years of experience in teaching, working with groups from multinational companies, private attendees or young students. "
+    title: "Coach With Real Experience",
+    description: "Learn with a teacher who has guided professionals, students, and private learners for years."
   }
 ]
 
@@ -43,7 +43,7 @@ const Benefits = ({setSelectedPage}: Props) => {
   return (
   <section
   id="benefits"
-  className="mx-auto min-h-full w-5/6 py-20"
+  className="mx-auto min-h-full w-5/6 py-24"
   >
     <motion.div
     onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
@@ -61,11 +61,13 @@ const Benefits = ({setSelectedPage}: Props) => {
         visible: { opacity: 1, x: 0 }
       }}
         >
-        <HText>MORE THAN JUST A LECTURE</HText>
-        <p className="my-5 text-sm">
-          I am a firm believer that the best way to learn is by using the language 
-          in many different aspects, be it movie scenes, music lyrics, 
-          carefully selected conversations or phrases.
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-amber-600">
+          Why This Works
+        </p>
+        <HText>More Than A Class. It Is A Training System You Can Actually Use.</HText>
+        <p className="my-5 max-w-2xl text-slate-600">
+          We combine conversation, listening, pronunciation, and practical grammar in one flow.
+          Every lesson is active, tailored, and connected to your real communication needs.
         </p>
       </motion.div>
       
@@ -89,17 +91,17 @@ const Benefits = ({setSelectedPage}: Props) => {
       </motion.div>
 
       {/* GRAPHICS AND DESC */}
-      <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
+      <div className="mt-16 items-center justify-between gap-16 md:mt-28 md:flex">
         {/* GRAPHIC */}
           <img 
-          className="mx-auto max-w-sm "
+          className="mx-auto max-w-sm rounded-[2rem] border border-slate-200 object-cover shadow-2xl shadow-slate-200/60"
           src={HappyStudent} alt="benefit-page-graphic" />
 
         {/* DESCRIPTION */}
-        <div>
+        <div className="mt-10 md:mt-0 md:basis-1/2">
           {/* TITLE */}
           <div className="relative">
-            <div className="before:absolute before:-top-20 before:-left-20  before:z-[1] before:content-abstractwaves">
+            <div>
               <motion.div
                  initial="hidden"
                  whileInView="visible"
@@ -111,9 +113,7 @@ const Benefits = ({setSelectedPage}: Props) => {
                  }}
               >
               <HText>
-                MANY HAPPY LEARNERS GETTING CLOSER TO THEIR {" "}
-                <span className="text-primary-500">GOALS</span> 
-                {" "} EVERY DAY
+                Learners Build Momentum Every Week And Feel The Difference In Real Conversations.
               </HText>
               </motion.div>
             </div>
@@ -130,29 +130,20 @@ const Benefits = ({setSelectedPage}: Props) => {
                visible: { opacity: 1, x: 0 }
              }}
           >
-            <p className="my-5">
-              My goal is to make each lesson as enjoyable and fun as possible, you have to
-              just show up and be open to learn!
-              This approach goes beyond traditional methods, integrating special techniques designed 
-              to make learning a dynamic and engaging journey. Whether it's refining grammar 
-              or honing conversational skills, every session is tailored 
-              to your individual goals. 
+            <p className="my-5 text-slate-600">
+              You get a clear learning path, not random exercises. We track what you can already do,
+              identify what is holding you back, and then train those exact situations until they feel natural.
             </p>
-            <p className="mb-5">
-              Let's embark on this language adventure together, 
-              where every lesson is a step towards fluency. 
-             <br />
-             <br />
-              Get ready to unlock your full linguistic potential! Sign up for a free first consultation below.
+            <p className="mb-5 text-slate-600">
+              The result is simple: less overthinking, more speaking. If you are ready to improve your
+              English in a practical and motivating way, book a first consultation.
             </p>
           </motion.div>
           {/*  BUTTON */} 
-          <div className="relative mt-16">
-            <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] content-sparkles">
-              <ActionButton setSelectedPage={setSelectedPage}>
-                Join Now
-              </ActionButton>
-            </div>
+          <div className="relative mt-12">
+            <ActionButton setSelectedPage={setSelectedPage}>
+              Book A Free Intro
+            </ActionButton>
           </div>
         </div>
       </div>

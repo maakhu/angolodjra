@@ -4,31 +4,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        "gray-20": "#F8F4EB",
-        "gray-50": "#EFE6E6",
-        "gray-100": "#DFCCCC",
-        "gray-500": "#5E0000",
-        "primary-100": "#FFE1E0",
-        "primary-300": "#FFA6A3",
-        "primary-500": "#FF6B66",
-        "secondary-400": "#FFCD5B",
-        "secondary-500": "#FFC132",
+        "sand-50": "#fffaf1",
+        "sand-100": "#f9edd7",
+        "ink-600": "#334155",
       },
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      backgroundImage: (theme) => ({
-        "gradient-yellowred":
-          "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
-        "mobile-home": "url('./assets/HomePageGraphic.png')",
-      }),
+      backgroundImage: {
+        "soft-grid":
+          "radial-gradient(circle at 1px 1px, rgba(15,23,42,0.08) 1px, transparent 0)",
+      },
       fontFamily: {
-        dmsans: ["DM Sans", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
+        sans: ["Manrope", "sans-serif"],
+        display: ["Space Grotesk", "sans-serif"],
       },
-      content: {
-        evolvetext: "url('./assets/EvolveText.png')",
-        abstractwaves: "url('./assets/AbstractWaves.png')",
-        sparkles: "url('./assets/Sparkles.png')",
-        circles: "url('./assets/Circles.png')",
+      animation: {
+        float: "float 8s ease-in-out infinite",
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
     },
     screens: {

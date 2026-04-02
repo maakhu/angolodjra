@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { SelectedPage } from "@/shared/types";
 import Contact from "./scenes/contact";
 import Footer from "./scenes/footer";
+import Testimonials from "./scenes/testimonials";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
@@ -24,7 +25,7 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return <div className="app bg-gray-20">
+  return <div className="app bg-sand-50">
     <Navbar
               isTopOfPage={isTopOfPage}
               selectedPage={selectedPage}
@@ -32,6 +33,7 @@ function App() {
     />
     <Home setSelectedPage={setSelectedPage} />
     <Benefits setSelectedPage={setSelectedPage} />
+    <Testimonials setSelectedPage={setSelectedPage} />
     <Contact setSelectedPage={setSelectedPage}/>
     <Footer />
   </div>;
