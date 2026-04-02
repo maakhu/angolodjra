@@ -12,7 +12,10 @@ function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
     const storedTheme = localStorage.getItem("theme");
-    return storedTheme === "dark";
+    if (storedTheme === "light") {
+      return false;
+    }
+    return true;
   });
 
   useEffect(() => {
@@ -20,9 +23,11 @@ function App() {
     if (isDarkMode) {
       htmlElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
+      htmlElement.style.colorScheme = "dark";
     } else {
       htmlElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
+      htmlElement.style.colorScheme = "light";
     }
   }, [isDarkMode]);
 

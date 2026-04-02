@@ -27,7 +27,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage, isDarkMode, toggleD
     >
       <div className={`${flexBetween} mx-auto w-5/6`}>
           {/* LEFT SIDE */}
-        <div className={`${flexBetween} w-full gap-16`}>
+        <div className={`${flexBetween} w-full gap-8`}>
           <a
             href="#home"
             className="font-display bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-xl font-semibold tracking-tight text-transparent dark:from-amber-200 dark:to-amber-500"
@@ -75,6 +75,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage, isDarkMode, toggleD
                   <button
                   className="rounded-full border border-slate-300 bg-white p-2 dark:border-amber-700 dark:bg-zinc-900"
                   onClick={() => setIsMenuToggled(!isMenuToggled)}
+                  aria-label="Open mobile menu"
                   >
                     <Bars3Icon className="h-6 w-6 text-slate-700 dark:text-amber-300" />
                   </button>
@@ -84,9 +85,9 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage, isDarkMode, toggleD
     </div>
     {/* MOBILE MENU MODAL */}
     {!isAboveMediumScreens && isMenuToggled && (
-      <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] border-l border-slate-200 bg-white drop-shadow-xl dark:border-amber-700/40 dark:bg-zinc-950">
+      <div className="fixed right-0 bottom-0 z-40 h-full w-[82%] max-w-[320px] border-l border-slate-200 bg-white drop-shadow-xl dark:border-amber-700/40 dark:bg-zinc-950">
         {/* CLOSE ICON */}
-        <div className="flex justify-end p-10">
+        <div className="flex justify-end p-6">
           <button
             onClick={toggleDarkMode}
             className="mr-3 rounded-full border border-slate-300 bg-white p-2 text-slate-700 transition duration-300 hover:border-amber-400 hover:text-amber-600 dark:border-amber-700 dark:bg-zinc-900 dark:text-amber-300"
@@ -94,12 +95,14 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage, isDarkMode, toggleD
           >
             {isDarkMode ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
           </button>
-          <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+          <button onClick={() => setIsMenuToggled(!isMenuToggled)} aria-label="Close mobile menu">
             <XMarkIcon className="h-6 w-6 text-slate-500 dark:text-amber-300" />
           </button>
         </div>
         {/* MENU LINKS */}
-          <div className="ml-[26%] flex flex-col gap-8 text-2xl">
+          <div className="px-8 pt-3">
+            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.22em] text-amber-600">Navigation</p>
+            <div className="flex flex-col gap-6 text-xl">
                 <Link 
                 page = "Home" 
                 selectedPage={selectedPage}
@@ -120,6 +123,8 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage, isDarkMode, toggleD
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
                 />
+              <ActionButton setSelectedPage={setSelectedPage}>Book Intro Call</ActionButton>
+            </div>
               </div>
       </div>
     )}
