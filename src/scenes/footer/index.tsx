@@ -1,5 +1,6 @@
 const Footer = () => {
   return (<footer className="bg-slate-900 py-16 text-slate-200 dark:bg-black">
+    <div className="mx-auto mb-10 h-px w-5/6 bg-gradient-to-r from-transparent via-amber-500/70 to-transparent" />
     <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
       <div className="mt-16 basis-1/2 md:mt-0">
         <h2 className="font-display text-2xl font-semibold tracking-tight text-white dark:text-amber-300">angolodj ra</h2>
@@ -8,6 +9,7 @@ const Footer = () => {
           Private English Coach <br />
         </p>
         <p className="text-sm text-slate-400">© Angolodj ra. All rights reserved.</p>
+        <p className="mt-2 text-xs uppercase tracking-[0.2em] text-amber-300/80">Crafted for meaningful progress</p>
       </div>
       <div className="mt-16 basis-1/4 md:mt-0">
         <h4 className="font-semibold text-white dark:text-amber-300">Social Media</h4>

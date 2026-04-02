@@ -53,9 +53,10 @@ const Testimonials = ({ setSelectedPage }: Props) => {
           {testimonials.map((testimonial) => (
             <article
               key={testimonial.name}
-              className="rounded-3xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-200/60 dark:border-amber-700/40 dark:bg-zinc-900 dark:shadow-black/50"
+              className="luxury-card relative rounded-3xl p-8"
             >
-              <p className="text-slate-700 dark:text-zinc-300">"{testimonial.quote}"</p>
+              <p className="mb-2 font-display text-4xl leading-none text-amber-500/60">"</p>
+              <p className="text-slate-700 dark:text-zinc-300">{testimonial.quote}</p>
               <p className="mt-5 text-sm font-semibold text-slate-900 dark:text-amber-300">{testimonial.name}</p>
             </article>
           ))}

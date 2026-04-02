@@ -35,10 +35,44 @@ body {
     var(--bg-layer-2),
     var(--bg-layer-3);
   transition: background-color 0.35s ease, color 0.35s ease;
+  text-rendering: geometricPrecision;
 }
 
 * {
   scroll-behavior: smooth;
+}
+
+.luxury-card {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.62));
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.dark .luxury-card {
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  background: linear-gradient(145deg, rgba(24, 24, 27, 0.82), rgba(9, 9, 11, 0.9));
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.55);
+}
+
+.gold-divider {
+  position: relative;
+}
+
+.gold-divider::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.85rem;
+  height: 2px;
+  width: 72px;
+  background: linear-gradient(90deg, #f59e0b 0%, rgba(245, 158, 11, 0.08) 100%);
+}
+
+.premium-glow {
+  box-shadow:
+    0 0 0 1px rgba(245, 158, 11, 0.2),
+    0 18px 38px rgba(217, 119, 6, 0.28);
 }
 
 ::selection {

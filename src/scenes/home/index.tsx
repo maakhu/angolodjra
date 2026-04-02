@@ -43,17 +43,26 @@ const Home = ({setSelectedPage}: Props) => {
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-amber-600">
               English Coaching With Personality
             </p>
-            <h1 className="font-display text-5xl font-semibold leading-[1.08] text-slate-900 dark:text-zinc-100 md:text-7xl">
+            <h1 className="gold-divider font-display text-5xl font-semibold leading-[1.08] text-slate-900 dark:text-zinc-100 md:text-7xl">
               Speak natural English with confidence, not fear.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-slate-600 dark:text-zinc-300">
               Personal sessions that blend real conversations, practical grammar, and
               everyday vocabulary, so your English works in real life from day one.
             </p>
-            <div className="mt-8 grid max-w-xl grid-cols-3 gap-3 text-center text-xs font-semibold uppercase tracking-wide text-slate-700 dark:text-amber-200">
-              <p className="rounded-full border border-slate-300 bg-white px-3 py-2 dark:border-amber-700/50 dark:bg-zinc-900">1:1 Focus</p>
-              <p className="rounded-full border border-slate-300 bg-white px-3 py-2 dark:border-amber-700/50 dark:bg-zinc-900">Real Topics</p>
-              <p className="rounded-full border border-slate-300 bg-white px-3 py-2 dark:border-amber-700/50 dark:bg-zinc-900">Fast Progress</p>
+            <div className="mt-10 grid max-w-xl grid-cols-3 gap-3 text-center text-xs font-semibold uppercase tracking-wide text-slate-700 dark:text-amber-200">
+              <div className="luxury-card rounded-2xl px-3 py-3">
+                <p className="text-lg font-bold">1:1</p>
+                <p>Coaching</p>
+              </div>
+              <div className="luxury-card rounded-2xl px-3 py-3">
+                <p className="text-lg font-bold">8-12</p>
+                <p>Weeks Avg.</p>
+              </div>
+              <div className="luxury-card rounded-2xl px-3 py-3">
+                <p className="text-lg font-bold">100%</p>
+                <p>Tailored</p>
+              </div>
             </div>
           </motion.div>
           {/* ACTIONS */}
@@ -108,7 +117,7 @@ const Home = ({setSelectedPage}: Props) => {
         <p className="text-sm font-bold uppercase tracking-[0.2em] text-slate-600 dark:text-amber-200">
           Trusted by learners from
         </p>
-        <div className="mt-4 flex items-center justify-center gap-10 grayscale">
+        <div className="mt-4 flex items-center justify-center gap-10 grayscale opacity-80">
           <img src={SponsorRedBull} alt="sponsor-red-bull" />
           <img src={SponsorForbes} alt="sponsor-forbes" />
           <img src={SponsorFortune} alt="sponsor-fortune" />

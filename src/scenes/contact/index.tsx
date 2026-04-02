@@ -63,7 +63,7 @@ const Contact = ({ setSelectedPage }: Props) => {
         {/* FORM AND IMAGE */}
         <div className="mt-10 justify-between gap-8 md:flex">
           <motion.div
-            className="mt-10 basis-3/5 rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/60 dark:border-amber-700/40 dark:bg-zinc-900 dark:shadow-black/50 md:mt-0"
+            className="luxury-card mt-10 basis-3/5 rounded-3xl p-8 md:mt-0"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -138,6 +138,25 @@ const Contact = ({ setSelectedPage }: Props) => {
               <p className="mt-4 text-sm text-slate-500 dark:text-zinc-400">No spam. Just a personal reply within 24 hours.</p>
               </form>
             </motion.div>
+            <motion.aside
+              className="luxury-card mt-8 basis-2/5 rounded-3xl p-8 md:mt-0"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-600">What Happens Next</p>
+              <h3 className="mt-4 font-display text-2xl font-semibold text-slate-900 dark:text-zinc-100">A Premium Start Experience</h3>
+              <ul className="mt-6 space-y-4 text-sm text-slate-600 dark:text-zinc-300">
+                <li className="rounded-2xl border border-slate-200 px-4 py-3 dark:border-amber-700/40">Step 1: 15-minute clarity call about your goals.</li>
+                <li className="rounded-2xl border border-slate-200 px-4 py-3 dark:border-amber-700/40">Step 2: Personal level and speaking confidence map.</li>
+                <li className="rounded-2xl border border-slate-200 px-4 py-3 dark:border-amber-700/40">Step 3: A custom learning plan for your next 8 weeks.</li>
+              </ul>
+            </motion.aside>
           </div>
       </motion.div>
     </section>

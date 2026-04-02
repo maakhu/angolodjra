@@ -30,7 +30,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage, isDarkMode, toggleD
         <div className={`${flexBetween} w-full gap-16`}>
           <a
             href="#home"
-            className="font-display text-xl font-semibold tracking-tight text-slate-900 dark:text-amber-300"
+            className="font-display bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-xl font-semibold tracking-tight text-transparent dark:from-amber-200 dark:to-amber-500"
           >
             angolodj ra
           </a>
@@ -62,7 +62,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage, isDarkMode, toggleD
         <div className={`${flexBetween} gap-8`}>
           <button
             onClick={toggleDarkMode}
-            className="rounded-full border border-slate-300 bg-white p-2 text-slate-700 transition duration-300 hover:border-amber-400 hover:text-amber-600 dark:border-amber-700 dark:bg-zinc-900 dark:text-amber-300 dark:hover:border-amber-500"
+            className="premium-glow rounded-full border border-slate-300 bg-white p-2 text-slate-700 transition duration-300 hover:-translate-y-0.5 hover:border-amber-400 hover:text-amber-600 dark:border-amber-700 dark:bg-zinc-900 dark:text-amber-300 dark:hover:border-amber-500"
             aria-label="Toggle dark mode"
           >
             {isDarkMode ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
